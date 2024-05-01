@@ -1,4 +1,42 @@
 ====================
+    04-30-2024     
+====================
+
+* frameworks/base
+61812ab  Fix default values for 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
+a81ed1a  Add 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
+
+
+* hardware/xiaomi
+ee81450  hidl: biometrics: fingerprint: Add enroll methods to udfps handler  [Arian]
+bd93712  sensors: Handle fod press status without coordinates  [Arian]
+52ca617  sensors: Add udfps long press sensor  [Cosmin Tanislav]
+18085d6  sensors: Fix locking around setOperationMode and activate  [Cosmin Tanislav]
+858c778  sensors: Move one shot sensor out of main class  [Cosmin Tanislav]
+946c2c2  sensors: Make sensor set mode operation function virtual  [Cosmin Tanislav]
+21989d4  sensors: Make sensor flush function virtual  [Cosmin Tanislav]
+fdd89dd  sensors: Make sensor run function virtual  [Cosmin Tanislav]
+be72a30  sensors: Make sensor batch function virtual  [Cosmin Tanislav]
+f1f2b66  Add dummy sensors sub HAL  [Cosmin Tanislav]
+
+
+* kernel/xiaomi/sm8450
+4eeec99  Revert "input: touchsreen: xiaomi: Import updated header from M11"  [RITEFANG]
+b51185b  Revert "Revert "input: touchscreen: xiaomi: Implement touch_thp_film""  [RITEFANG]
+dae02fe  Revert "[WIP] input: touchscreen: xiaomi: Reverse from stock module"  [RITEFANG]
+ab9cd87  Revert "input: touchscreen: xiaomi: Get rid of notify buf spam"  [RITEFANG]
+3fe8321  Revert "input: touchscreen: fts_spi: Change enable_touch_raw argument to int"  [RITEFANG]
+
+
+* packages/modules/Wifi
+0a83077  config: Allow Settings or SUW to connect to insecure Enterprise networks  [Joey Huab]
+
+
+* vendor/derp
+904c1d1  android: merge_dtbs: Respect miboard-id while merging  [Arian]
+
+
+====================
     04-29-2024     
 ====================
 
@@ -10,9 +48,11 @@
 502f512  cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean  [Jason Edson]
 
 
+* device/derp/sepolicy
+9db611c  sepolicy: Label Dolby Sepolicy labels  [johnmart19]
+
+
 * frameworks/base
-2a076cc  Fix default values for 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
-cdddcaf  Add 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
 0289dcc  display: Don't reset brightness adjustment on clearUserDataPoints()  [LibXZR]
 74c93ac  SystemUI: QS colored icons [1/2]  [Dil3mm4]
 0e1e056  WindowManager: Fix default state for navigation bar  [minaripenguin]
@@ -727,27 +767,6 @@ bed6915  SystemUI: Update resource Java imports to A14 QPR2  [Stella Bloom]
 19c3436  SystemUI: Use main thread for clock position  [NurKeinNeid]
 
 
-* hardware/xiaomi
-2e17c20  hidl: biometrics: fingerprint: Add enroll methods to udfps handler  [Arian]
-1d24b1e  sensors: Handle fod press status without coordinates  [Arian]
-9857135  sensors: Add udfps long press sensor  [Cosmin Tanislav]
-cbc2c93  sensors: Fix locking around setOperationMode and activate  [Cosmin Tanislav]
-dbf7775  sensors: Move one shot sensor out of main class  [Cosmin Tanislav]
-d93e575  sensors: Make sensor set mode operation function virtual  [Cosmin Tanislav]
-2dc9177  sensors: Make sensor flush function virtual  [Cosmin Tanislav]
-4845eb8  sensors: Make sensor run function virtual  [Cosmin Tanislav]
-475da80  sensors: Make sensor batch function virtual  [Cosmin Tanislav]
-50bd44b  Add dummy sensors sub HAL  [Cosmin Tanislav]
-
-
-* kernel/xiaomi/sm8450
-753d01a  Revert "input: touchsreen: xiaomi: Import updated header from M11"  [RITEFANG]
-5e09dbd  Revert "Revert "input: touchscreen: xiaomi: Implement touch_thp_film""  [RITEFANG]
-30f977a  Revert "[WIP] input: touchscreen: xiaomi: Reverse from stock module"  [RITEFANG]
-2621eda  Revert "input: touchscreen: xiaomi: Get rid of notify buf spam"  [RITEFANG]
-ec0e517  Revert "input: touchscreen: fts_spi: Change enable_touch_raw argument to int"  [RITEFANG]
-
-
 * manifest
 c2b8d1d  manifest: Track CarrierConfig  [NurKeinNeid]
 
@@ -767,10 +786,6 @@ b2c7980  DerpSpace: Add switch preferences for privacy indicators [2/2]  [jhonbo
 
 * packages/apps/OmniStyle
 7b7b71f  OmniStyle: make header container more big & round  [Subratam6296]
-
-
-* packages/apps/Settings
-a544d1b  Revert "[Wi-Fi] Remove 'Do not validate' option in CA certificate spinner"  [TogoFire]
 
 
 * packages/apps/ThemePicker
@@ -795,12 +810,7 @@ a34e0d3  TouchGestures: Always perform haptic feedback  [LibXZR]
 bd1376a  TouchGestures: Add support for wechat & alipay pay  [LibXZR]
 
 
-* packages/modules/Wifi
-1b06901  config: Allow Settings or SUW to connect to insecure Enterprise networks  [Joey Huab]
-
-
 * vendor/derp
-0b5348a  android: merge_dtbs: Respect miboard-id while merging  [Arian]
 03e4f87  derp: Opt-in to shipping full recovery image by default  [Jarl-Penguin]
 a5ebc43  overlay: Update Dialer VVM config  [Joel Beckmeyer]
 b386cfe  apns-conf: Add "Tinkoff Mobile" mcc="250" mnc="62"  [Ido Ben-Hur]
@@ -815,10 +825,6 @@ d41a174  support: Migrate more switches to SwitchPreferenceCompat  [Subratam6296
 ====================
     04-28-2024     
 ====================
-
-* device/derp/sepolicy
-9db611c  sepolicy: Label Dolby Sepolicy labels  [johnmart19]
-
 
 * device/xiaomi/sm8450-common
 6fca644  Merge branch 'cupid-development:lineage-21' into 14.0  [Minus]
@@ -925,8 +931,4 @@ ccd5d7c  Revert "Revert "DerpSpace: Fingerprint authentication vibration [2/2]""
 d0f091c  DerpSpace: Allow turning on Bluetooth when pressing the tiles [2/2]  [Ido Ben-Hur]
 b316cb0  DerpSpace: Add settings for pulse light face down [2/2]  [Dhina17]
 
-
-====================
-    04-25-2024     
-====================
 
