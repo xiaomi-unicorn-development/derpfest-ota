@@ -1,40 +1,68 @@
 ====================
-    04-30-2024     
+    05-02-2024     
 ====================
 
+* device/xiaomi/sm8450-common
+3831d5e  Revert "sm8450-common: import dolby from AOSPA"  [RITEFANG]
+e201d56  sm8450-common: drop sepolicy that caused build failure 	deleted:    sepolicy/vendor/diag-router.te  [RITEFANG]
+4e8b1fa  	modified:   properties/vendor.prop  [RITEFANG]
+f538b15  	modified:   common.mk  [RITEFANG]
+9179b4e  sm8450-common: revert 	modified:   BoardConfigCommon.mk  [RITEFANG]
+9e3d810  sm8450-common: drop doze 	modified:   parts/Android.bp 	modified:   parts/AndroidManifest.xml 	deleted:    parts/proguard.flags 	deleted:    parts/res/drawable/ic_doze_aod.xml 	deleted:    parts/res/drawable/ic_doze_brightness_auto.xml 	deleted:    parts/res/drawable/ic_doze_brightness_high.xml 	deleted:    parts/res/drawable/ic_doze_brightness_low.xml 	new file:   parts/res/drawable/ic_thermal_benchmark.xml 	new file:   parts/res/drawable/ic_thermal_browser.xml 	new file:   parts/res/drawable/ic_thermal_camera.xml 	new file:   parts/res/drawable/ic_thermal_default.xml 	new file:   parts/res/drawable/ic_thermal_dialer.xml 	new file:   parts/res/drawable/ic_thermal_gaming.xml 	new file:   parts/res/drawable/ic_thermal_streaming.xml 	renamed:    parts/res/values/arrays.xml -> parts/res/layout/thermal_layout.xml 	new file:   parts/res/layout/thermal_list_item.xml 	deleted:    parts/res/values-fr/strings.xml 	modified:   parts/res/values/strings.xml 	modified:   parts/res/xml/clear_speaker_settings.xml 	deleted:    parts/res/xml/doze_settings.xml 	modified:   parts/src/org/lineageos/settings/BootCompletedReceiver.java 	deleted:    parts/src/org/lineageos/settings/doze/AodSensor.java 	deleted:    parts/src/org/lineageos/settings/doze/DozeService.java 	deleted:    parts/src/org/lineageos/settings/doze/DozeSettingsFragment.java 	deleted:    parts/src/org/lineageos/settings/doze/DozeUtils.java 	modified:   parts/src/org/lineageos/settings/speaker/ClearSpeakerFragment.java 	renamed:    parts/src/org/lineageos/settings/doze/DozeSettingsActivity.java -> parts/src/org/lineageos/settings/thermal/ThermalActivity.java 	new file:   parts/src/org/lineageos/settings/thermal/ThermalService.java 	new file:   parts/src/org/lineageos/settings/thermal/ThermalSettingsFragment.java 	new file:   parts/src/org/lineageos/settings/thermal/ThermalUtils.java  [RITEFANG]
+bb07aa2  sm8450-common: import dolby from AOSPA 	new file:   dolby/Android.bp 	new file:   dolby/AndroidManifest.xml 	new file:   dolby/res/drawable/ic_dolby.xml 	new file:   dolby/res/drawable/ic_dolby_qs.xml 	new file:   dolby/res/values-zh-rCN/arrays.xml 	new file:   dolby/res/values-zh-rCN/strings.xml 	new file:   dolby/res/values/arrays.xml 	new file:   dolby/res/values/strings.xml 	new file:   dolby/res/xml/dolby_settings.xml 	new file:   dolby/src/com/xiaomi/dolby/BootCompletedReceiver.java 	new file:   dolby/src/com/xiaomi/dolby/DolbyActivity.java 	new file:   dolby/src/com/xiaomi/dolby/DolbyAtmos.java 	new file:   dolby/src/com/xiaomi/dolby/DolbyConstants.java 	new file:   dolby/src/com/xiaomi/dolby/DolbySettingsFragment.java 	new file:   dolby/src/com/xiaomi/dolby/DolbyTileService.java 	new file:   dolby/src/com/xiaomi/dolby/DolbyUtils.java 	new file:   dolby/src/com/xiaomi/dolby/SummaryProvider.java  [RITEFANG]
+39917e8  Drop old dolby: 	deleted:    dolby/Android.bp 	deleted:    dolby/AndroidManifest.xml 	deleted:    dolby/res/drawable/ic_dolby.xml 	deleted:    dolby/res/drawable/ic_dolby_qs.xml 	deleted:    dolby/res/values/arrays.xml 	deleted:    dolby/res/values/strings.xml 	deleted:    dolby/res/xml/dolby_settings.xml 	deleted:    dolby/src/com/xiaomi/dolby/BootCompletedReceiver.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbyActivity.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbyAtmos.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbyConstants.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbySettingsFragment.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbySummaryProvider.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbyTileService.java 	deleted:    dolby/src/com/xiaomi/dolby/DolbyUtils.java  [RITEFANG]
+
+
+* frameworks/av
+5830c6d  libaudiohal: only call getAudioPort if it is supported.  [jiabin]
+
+
 * frameworks/base
-61812ab  Fix default values for 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
-a81ed1a  Add 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
+b646fac  Fix default values for 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
+43b7ab4  Add 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
+fde74f8  Automatic translation import  [LineageOS Infra]
+d9744cd  Automatic translation import  [LineageOS Infra]
+ed4443c  fixup! SystemUI: Register content observer for clock position  [Oliver Scott]
+7100e25  fixup! Screenshot: Append app name to filename  [Oliver Scott]
+7d7c376  fixup! frameworks: Add support for advanced restart options  [Oliver Scott]
+572172e  Revert "sounds: Implement new screenshot sound effect"  [NurKeinNeid]
 
 
-* hardware/xiaomi
-ee81450  hidl: biometrics: fingerprint: Add enroll methods to udfps handler  [Arian]
-bd93712  sensors: Handle fod press status without coordinates  [Arian]
-52ca617  sensors: Add udfps long press sensor  [Cosmin Tanislav]
-18085d6  sensors: Fix locking around setOperationMode and activate  [Cosmin Tanislav]
-858c778  sensors: Move one shot sensor out of main class  [Cosmin Tanislav]
-946c2c2  sensors: Make sensor set mode operation function virtual  [Cosmin Tanislav]
-21989d4  sensors: Make sensor flush function virtual  [Cosmin Tanislav]
-fdd89dd  sensors: Make sensor run function virtual  [Cosmin Tanislav]
-be72a30  sensors: Make sensor batch function virtual  [Cosmin Tanislav]
-f1f2b66  Add dummy sensors sub HAL  [Cosmin Tanislav]
+* packages/apps/Flash
+ae00793  Automatic translation import  [LineageOS Infra]
 
 
-* kernel/xiaomi/sm8450
-4eeec99  Revert "input: touchsreen: xiaomi: Import updated header from M11"  [RITEFANG]
-b51185b  Revert "Revert "input: touchscreen: xiaomi: Implement touch_thp_film""  [RITEFANG]
-dae02fe  Revert "[WIP] input: touchscreen: xiaomi: Reverse from stock module"  [RITEFANG]
-ab9cd87  Revert "input: touchscreen: xiaomi: Get rid of notify buf spam"  [RITEFANG]
-3fe8321  Revert "input: touchscreen: fts_spi: Change enable_touch_raw argument to int"  [RITEFANG]
+* packages/apps/FlipFlap
+ce9ec1d  Automatic translation import  [LineageOS Infra]
 
 
-* packages/modules/Wifi
-0a83077  config: Allow Settings or SUW to connect to insecure Enterprise networks  [Joey Huab]
+* packages/apps/Glimpse
+d2d046b  Automatic translation import  [LineageOS Infra]
+
+
+* packages/apps/Settings
+6db33c0  Automatic translation import  [LineageOS Infra]
+
+
+* packages/apps/Updater
+cc5b094  Automatic translation import  [LineageOS Infra]
+
+
+* packages/resources/devicesettings
+f2f1e99  Automatic translation import  [LineageOS Infra]
 
 
 * vendor/derp
-904c1d1  android: merge_dtbs: Respect miboard-id while merging  [Arian]
+ecb60f3  android: merge_dtbs: Respect miboard-id while merging  [Arian]
 
+
+====================
+    05-01-2024     
+====================
+
+====================
+    04-30-2024     
+====================
 
 ====================
     04-29-2024     
@@ -860,75 +888,5 @@ d04fe07  Automatic translation import  [jhenrique09]
 4a85da1  sm8450-common: Decommonize libssccalapi@2.0  [Jens Reidel]
 c2013ba  sm8450-common: Add support for ziyi  [Jens Reidel]
 ec9369f  sm8450-common: Extract diwali media configs  [Jens Reidel]
-
-
-====================
-    04-27-2024     
-====================
-
-* kernel/xiaomi/sm8450
-0b2637e  arm64: configs: vendor: thor: Enable cam ispv3  [Jens Reidel]
-012e765  drivers: media: Import xiaomi camera ispv3 driver  [Jens Reidel]
-
-
-* kernel/xiaomi/sm8450-modules
-6ae5792  camera-kernel: Raise workqueue task count to 120  [Jens Reidel]
-e640993  camera-kernel: Increase camera icp context count to 80  [Jens Reidel]
-c5aa6c2  camera-kernel: Support firmware downloads on sem1217s and rumbas4h  [Jens Reidel]
-f4ad477  camera-kernel: Add support for cam ispv3  [Jens Reidel]
-a3cabfb  camera-kernel: Increase csid reset timeout  [Jens Reidel]
-1772f8d  camera-kernel: Support s12b cam_vana1 voltage override  [Jens Reidel]
-0fc4d58  camera-kernel: Zero out timestamp on ife init for zizhan  [Jens Reidel]
-4429273  camera-kernel: Handle ziyi flash driver on chinese units  [Jens Reidel]
-e07674b  camera-kernel: Handle ziyi flash sources on global units  [Jens Reidel]
-
-
-====================
-    04-26-2024     
-====================
-
-* device/xiaomi/sm8450-common
-b0a589a  sm8450-common: CarrierConfig: Set LTE+ threshold bandwidth to 0  [Tim Zimmermann]
-5b5452e  sm8450-common: CarrierConfig: Globally enable LTE+ icon  [Vishalcj17]
-a117997  sm8450-common: Enable fast charging by default  [truly-irham]
-37369c1  sm8450-common: Add missing Charger and Dolby Vision Blobs  [ghostrider-reborn]
-ec320f6  mondrian: XiaomiParts: Import French language support  [Nos430s]
-5659edd  sm8450-common: sepolicy: address vendor_hal_perf_default fingerprint denial  [Lowxorx]
-3fd5ed6  sm8450-common: overlay: show min/max refresh rate in settings  [Lowxorx]
-2cdae96  sm8450-common: overlay: support screen off udfps  [Lowxorx]
-3e638ec  sm8450-common: overlay: support smart pixels  [Lowxorx]
-cd9ae7b  sm8450-common: Do not balance msm_drm and kgsl_3d0 IRQs  [Jake Weinstein]
-4a5e031  sm8450-common: dolby: Override HDR types for dolby vision  [Adithya R]
-280dbfb  sm8450-common: dolby: Start services as early as possible on bootup  [Adithya R]
-9f14d57  sm8450-common: dolby: Restore dolby profile on audio changes  [Adithya R]
-9c3149d  sm8450-common: parts: Migrate to CompoundButton.OnCheckedChangeListener  [Chaohui Wang]
-82ff10c  sm8450-common: parts: Enable use_resource_processor for all sysui deps  [Peter Kalauskas]
-8d70186  sm8450-common: parts: Import from xiaomi_sdm845-common  [Arian]
-7861cd9  sm8450-common: enable Dolby Vision in hwcomposer  [Chenyang Zhong]
-d60e3ca  sm8450-common: Enable VoNR Calls support  [johnmart19]
-1de7aae  sm8450-common: Update CPU Architectures  [chaitanyakm]
-1bf4c88  sm8450-common: rootdir: Fix the battery drain due to statsd...?  [Terminator-J]
-8350da4  sm8450-common: Build android.hardware.graphics.common-V4-ndk  [Sugakesshaa]
-ae0b557  sm8450-common: audio: Remove support for BT LC3 codec  [Sugakesshaa]
-b70b8a1  sm8450-common: wifi: Enable support for IEEE80211AX  [Peng Xu]
-bc31821  sm8450-common: wlan: Disable FW TWT  [Juhyung Park]
-49a2601  sm8450-common: overlay: Drop autobrightness configuration  [bheatleyyy]
-3814338  sm8450-common: audio: Set valid and supported channel mask for earpiece  [Anver sadhique]
-5b26269  sm8450-common: Add bluetooth a2dp audio routes to audio policy config  [bheatleyyy]
-3837b3a  [SQUASH] sm8450-common: Introduce Dolby Atmos  [Adithya R]
-2a61468  sm8450-common: Add support for Dolby Atmos  [bheatleyyy]
-4015be5  sm8450-common: overlay: Rework supported color modes  [Adithya R]
-8942bd1  sm8450-common: Move to Xiaomi common sepolicy  [bheatleyyy]
-f792f3a  sm8450-common: Set ro.netflix.bsp_rev  [LuK1337]
-
-
-* hardware/qcom-caf/msm8998/audio
-e91710f  audio_amplifier: Change the enable amplifier function location  [Luofan Chen]
-
-
-* packages/apps/DerpSpace
-ccd5d7c  Revert "Revert "DerpSpace: Fingerprint authentication vibration [2/2]""  [NurKeinNeid]
-d0f091c  DerpSpace: Allow turning on Bluetooth when pressing the tiles [2/2]  [Ido Ben-Hur]
-b316cb0  DerpSpace: Add settings for pulse light face down [2/2]  [Dhina17]
 
 
