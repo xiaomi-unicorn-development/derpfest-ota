@@ -1,5 +1,9 @@
 ====================
-    05-02-2024     
+    05-04-2024     
+====================
+
+====================
+    05-03-2024     
 ====================
 
 * device/xiaomi/sm8450-common
@@ -18,14 +22,16 @@ bb07aa2  sm8450-common: import dolby from AOSPA 	new file:   dolby/Android.bp 	n
 
 
 * frameworks/base
-b646fac  Fix default values for 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
-43b7ab4  Add 5G Ultra Wideband icon carrier config keys  [Vala Zadeh]
 fde74f8  Automatic translation import  [LineageOS Infra]
 d9744cd  Automatic translation import  [LineageOS Infra]
 ed4443c  fixup! SystemUI: Register content observer for clock position  [Oliver Scott]
 7100e25  fixup! Screenshot: Append app name to filename  [Oliver Scott]
 7d7c376  fixup! frameworks: Add support for advanced restart options  [Oliver Scott]
 572172e  Revert "sounds: Implement new screenshot sound effect"  [NurKeinNeid]
+
+
+* kernel/xiaomi/sm8450
+0349df0  ARM64: configs: vendor: thor: Enable BQ cloud authentication  [Jens Reidel]
 
 
 * packages/apps/Flash
@@ -52,9 +58,9 @@ cc5b094  Automatic translation import  [LineageOS Infra]
 f2f1e99  Automatic translation import  [LineageOS Infra]
 
 
-* vendor/derp
-ecb60f3  android: merge_dtbs: Respect miboard-id while merging  [Arian]
-
+====================
+    05-02-2024     
+====================
 
 ====================
     05-01-2024     
@@ -64,20 +70,8 @@ ecb60f3  android: merge_dtbs: Respect miboard-id while merging  [Arian]
     04-30-2024     
 ====================
 
-====================
-    04-29-2024     
-====================
-
 * build/make
 6a5b74a  fixup! Correct logic for obtaining the path to full recovery image  [Luca Stefani]
-
-
-* build/soong
-502f512  cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean  [Jason Edson]
-
-
-* device/derp/sepolicy
-9db611c  sepolicy: Label Dolby Sepolicy labels  [johnmart19]
 
 
 * frameworks/base
@@ -848,45 +842,5 @@ efa3bc2  apns-conf: Update Digi Mobil mcc="226" mnc="05"  [Ido Ben-Hur]
 
 * vendor/support
 d41a174  support: Migrate more switches to SwitchPreferenceCompat  [Subratam6296]
-
-
-====================
-    04-28-2024     
-====================
-
-* device/xiaomi/sm8450-common
-6fca644  Merge branch 'cupid-development:lineage-21' into 14.0  [Minus]
-3fcef6b  sm8450-common: Decommonize libssccalapi@2.0  [Arian]
-e69e656  sm8450-common: Add sepolicy rules for ziyi battery  [Jens Reidel]
-ccedea5  sm8450-common: Add support for ziyi  [Jens Reidel]
-3097678  sm8450-common: Extract diwali media configs  [Jens Reidel]
-d6a3202  sm8450-common: Build qca6750 module in addition to qca6490  [Jens Reidel]
-c4ed6ed  sm8450-common: Add qca6750 config  [Jens Reidel]
-
-
-* kernel/xiaomi/sm8450-modules
-1a2902b  qcacld-3.0: Take LOCAL_DEV_NAME from symlink  [Jens Reidel]
-825e8c6  display-drivers: Add support for L9S_42_02_0C panel  [Jens Reidel]
-
-
-* packages/apps/CarrierConfig
-1503941  Override name of Mainland China carriers  [cjybyjk]
-
-
-* packages/apps/DerpSpace
-9bfeb76  DerpSpace: Replace 'Transparency' with 'Opacity'  [NurKeinNeid]
-
-
-* packages/apps/TouchGestures
-106e95c  Automatic translation import  [jhenrique09]
-cf34ca0  Automatic translation import  [jhenrique09]
-4d61384  Automatic translation import  [jhenrique09]
-d04fe07  Automatic translation import  [jhenrique09]
-
-
-* vendor/xiaomi/sm8450-common
-4a85da1  sm8450-common: Decommonize libssccalapi@2.0  [Jens Reidel]
-c2013ba  sm8450-common: Add support for ziyi  [Jens Reidel]
-ec9369f  sm8450-common: Extract diwali media configs  [Jens Reidel]
 
 
